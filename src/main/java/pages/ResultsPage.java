@@ -1,31 +1,23 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.JavascriptExecutor;
 
 
 import java.time.Duration;
 
-public class ResultsPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private Duration timeout;
+public class ResultsPage extends BasePage{
+    private By firstResultLink = By.xpath("//*[@id='product_view_0']/a");
+    private By clearFilterButton = By.cssSelector("#layered-filter-block #vshop_filter .clear_price");
 
-    private By firstResult = By.xpath("//div[contains(@class,'products list')]/div[contains(@class,'product-item-view')][1]");
     public ResultsPage(WebDriver driver, Duration timeout) {
-        this.wait = new WebDriverWait(driver, timeout);
-        this.driver = driver;
+        super(driver, timeout);
     }
 
-    public ProductPage selectFirstResult() {
-        driver.findElement(firstResult).click();
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstResult);
-
-        return new ProductPage(driver, timeout);
+    public void selectFirstResult() {
+        wait.until(ExpectedConditions.elementToBeClickable(clearFilterButton));
+        WebElement firstResult = driver.findElement(firstResultLink);
+        clickJS(firstResult);
     }
 }
 

@@ -8,15 +8,11 @@ import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
 
-public class CartPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private Duration timeout;
+public class CartPage extends BasePage{
     private By productsInCart = By.xpath("//tr/td//div[contains(@class,'product-item-details')]//a");
 
     public CartPage(WebDriver driver, Duration timeout) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, timeout);
+        super(driver, timeout);
     }
 
     public boolean isProductInCart(String productURL) {

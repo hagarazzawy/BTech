@@ -3,7 +3,7 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <File name="FileLogger" fileName="logs/test.log">
+        <File name="FileLogger" fileName="logs/test.log" append="false">
             <PatternLayout>
                 <pattern>%d %p %c{1.} [%t] %m%n</pattern>
             </PatternLayout>

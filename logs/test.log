@@ -1,0 +1,11 @@
+2025-09-01 17:28:46,709 INFO t.BaseTest [main] Loading configuration file...
+2025-09-01 17:28:46,715 INFO t.BaseTest [main] Opening browser: chrome
+2025-09-01 17:28:48,377 INFO t.BaseTest [main] Starting test: tests.BTechTest.addFirstSearchResultToCart
+2025-09-01 17:28:49,948 INFO t.BaseTest [main] Opening URL https://btech.com
+2025-09-01 17:29:00,931 INFO t.BaseTest [main] First search result selected
+2025-09-01 17:29:02,644 INFO t.BaseTest [main] First search result has image
+2025-09-01 17:29:02,936 INFO t.BaseTest [main] Add to cart clicked
+2025-09-01 17:29:06,474 INFO t.BaseTest [main] Go to cart page clicked
+2025-09-01 17:29:06,853 INFO t.BaseTest [main] Product added to cart
+2025-09-01 17:29:06,882 INFO t.BaseTest [main] Test tests.BTechTest.addFirstSearchResultToCart passed 
+2025-09-01 17:29:06,893 INFO t.BaseTest [main] Closing browser
